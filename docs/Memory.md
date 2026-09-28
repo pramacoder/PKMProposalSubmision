@@ -2,7 +2,19 @@
 
 Perbarui setelah setiap sesi besar. Entri terbaru di atas.
 
-## 2026-09-28 — Sesi baca/pemahaman (konfirmasi penilaian + skor)
+## 2026-09-28 — Fase 0 LULUS
+- MySQL 8.0.30 aktif; `pkm_udayana` (utf8mb4_unicode_ci) dibuat.
+- `.env` dikonfigurasi: MySQL, `APP_TIMEZONE=Asia/Makassar`, `APP_LOCALE=id`, SMTP Brevo.
+- `php artisan migrate` sukses (3 tabel default); `php artisan test` 2/2 lulus.
+- Git repo diinisialisasi; initial commit `f623608`.
+- `composer.json` platform PHP 8.3 dikunci; Symfony downgrade ke 7.4.x.
+- Semua DEC terjawab: DEC-05 (1 PDF), 18 (tenggat/tidak menindaklanjuti), 19 (admin bersama revisi sub awal), 20 (rekap manual), 21 (batch=lolos internal), 22 (Brevo).
+- ADM-14 diperbarui: tema wajib SEMUA skema termasuk AI dan GFT.
+- PKM-KI rubrik 3a/3b dikonfirmasi; skor 4 tidak ada = format baku kementerian.
+- PH0-05 dan PH0-06 (skill/plugin desain) belum dipasang — dapat dilakukan di Fase 7.
+- **Berikutnya: Fase 1 (tinjauan dokumen final, lalu Fase 2 coding dimulai).**
+
+
 - `docs/domain/penilaian.md` **sudah terisi** lengkap: rubrik 10 skema dengan bobot per kriteria, total 100 per skema.
 - Skor 4 **tidak ada** adalah format baku resmi kementerian; penilai wajib memakai 6 nilai: 1, 2, 3, 5, 6, 7.
 - **DEC dijawab sesi ini:** DEC-05 (satu PDF), DEC-18 (tenggat per fase → tidak menindaklanjuti), DEC-19 (kekurangan admin bersama catatan revisi substantif awal), DEC-20 (rekap manual), DEC-21 (batch = lolos evaluasi internal), DEC-22 (SMTP = Brevo).

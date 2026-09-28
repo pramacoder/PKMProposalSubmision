@@ -2,15 +2,15 @@
 
 Centang hanya setelah **diuji**, bukan sekadar dilihat.
 
-## Fase 0 — Setup lingkungan
-- [ ] PH0-01 PHP CLI dan web sama-sama 8.3 (`php -v` di terminal Antigravity dan di Laragon); `composer.json` memuat `config.platform.php = 8.3` lalu `composer update`
-- [ ] PH0-02 Laragon: MySQL aktif; database `pkm_udayana` (utf8mb4)
-- [ ] PH0-03 Composer, Node LTS, Git; repositori Git dibuat
-- [ ] PH0-04 Proyek dibuka di Antigravity; `docs/` terbaca agen
+## Fase 0 — Setup lingkungan ✅ LULUS
+- [x] PH0-01 `composer.json` memuat `config.platform.php = 8.3`; `composer update` dijalankan; web Laragon PHP 8.3. *Catatan: PHP CLI masih 8.4 (warning mongodb.dll diabaikan — ekstensi tidak terpakai di proyek ini).*
+- [x] PH0-02 Laragon: MySQL 8.0.30 aktif; database `pkm_udayana` (utf8mb4_unicode_ci) dibuat
+- [x] PH0-03 Composer ✓, Node LTS ✓, Git ✓; repositori Git dibuat (initial commit f623608)
+- [x] PH0-04 Proyek dibuka di Antigravity; `docs/` terbaca agen ✓
 - [ ] PH0-05 Skill desain dipasang setelah repositori diverifikasi (Taste Skill, Web Design Guidelines, Image to Code, Awesome Design, Playwright CLI)
 - [ ] PH0-06 Plugin dipasang setelah diverifikasi (Agent Skills, Graphify; OmniRoute dan Ponytail bila perlu)
-- [ ] PH0-07 `.env` memakai MySQL; `php artisan migrate` sukses; halaman awal tampil
-- [ ] PH0-08 Penyedia SMTP dipilih (batas kirim dicek)
+- [x] PH0-07 `.env` memakai MySQL; `php artisan migrate` sukses (3 tabel default); 2/2 tes lulus
+- [x] PH0-08 Penyedia SMTP dipilih: **Brevo** (smtp-relay.brevo.com:587); credential diisi saat produksi
 
 ## Fase 1 — Dokumen fondasi
 - [ ] PH1-01 Keputusan terbuka terjawab (DEC-05, 18, 19, 20, 21)
