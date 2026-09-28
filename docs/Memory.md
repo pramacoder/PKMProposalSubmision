@@ -1,0 +1,43 @@
+# Memory — Log Keputusan dan Progres
+
+Perbarui setelah setiap sesi besar. Entri terbaru di atas.
+
+## 2026-09-28 — Sesi baca/pemahaman (konfirmasi penilaian + skor)
+- `docs/domain/penilaian.md` **sudah terisi** lengkap: rubrik 10 skema dengan bobot per kriteria, total 100 per skema.
+- Skor 4 **tidak ada** adalah format baku resmi kementerian; penilai wajib memakai 6 nilai: 1, 2, 3, 5, 6, 7.
+- **DEC dijawab sesi ini:** DEC-05 (satu PDF), DEC-18 (tenggat per fase → tidak menindaklanjuti), DEC-19 (kekurangan admin bersama catatan revisi substantif awal), DEC-20 (rekap manual), DEC-21 (batch = lolos evaluasi internal), DEC-22 (SMTP = Brevo).
+- `composer.json`: `config.platform.php = "8.3"` ditambahkan; `composer update` dijalankan (PH0-01 sebagian selesai — masih perlu PATH CLI juga diarahkan ke 8.3).
+- Celah yang masih perlu ditangani sebelum Fase 0 lulus:
+  - PATH PHP CLI ke 8.3 (RULE-40, PH0-01) — platform sudah dikunci di composer, tapi `php -v` masih 8.4.
+  - PKM-KI rubrik baris 3: penafsiran kriteria 3a/3b perlu dikonfirmasi sebelum seeder.
+  - Tema untuk PKM-AI dan PKM-GFT: opsional atau wajib?
+  - Urutan lampiran tambahan KC/KI terhadap 5 lampiran standar.
+
+
+- Sistem = tahap evaluasi internal PT sebelum Simbelmawa; keluaran: Berita Acara per bidang sesuai kuota klaster.
+- Pimpinan Operator = Pimpinan PT = operator + akun/hak akses + Berita Acara/laporan Simbelmawa/prestasi.
+- Review administratif tidak dinilai; skor seleksi = review final; dosen maks 10 proposal (NUPTK); 1 mahasiswa 1 proposal per siklus.
+- Dana Belmawa rekomendasi Rp6–8 juta; komposisi 80/20; 10 tema wajib dipilih.
+- Klaim akun: identitas dibuktikan lewat email student; Gmail hanya notifikasi dengan OTP; fallback verifikasi manual operator.
+- Panduan 2026 utama, Panduan 2025/formulir Udayana cadangan.
+- Terbuka: DEC-05, 18, 19, 20, 21. PHP CLI/web belum dikonfirmasi selaras.
+
+## 2026-09-28 — Pembaruan v0.2 (alur swimlane, jawaban DEC)
+- Alur bisnis resmi = flowchart swimlane pengguna (`domain/alur-bisnis.md`); menggantikan README awal.
+- Peran: student, supervisor, reviewer, university_lecturer, operator, super_operator (Pimpinan Operator). Pimpinan PT memutuskan per batch bersama reviewer dan operator.
+- Review: 1 administratif + 1 substantif awal + 1 final; ketiganya berbeda; reviewer rahasia.
+- Akun: impor data → klaim lewat email student → kata sandi acak berupa kata mudah diingat → wajib ganti. Kredensial hanya ke email tersimpan.
+- Halaman inti maks 10; video VGK = luaran pasca-pendanaan; lampiran tambahan KC, KI, PM, PI dicatat.
+- Lingkungan: PHP CLI 8.4.1 vs web Laragon 8.3.22 → samakan ke 8.3 (RULE-40, PH0-01).
+- Terbuka: DEC-05, 06, 11–18. Berikutnya: samakan PHP, lalu Fase 0 (verifikasi repositori skill dan plugin).
+
+## 2026-09-28 — Fase 1 (draf dokumen)
+- Stack: Laravel (PHP 8.3), MySQL Laragon, Blade + Tailwind + Alpine, Breeze, disk lokal privat; tanpa Supabase.
+- Mulai dari nol; dependensi awal Laravel baru terpasang.
+- 10 skema: 8 didanai (RE, RSH, K, KI, KC, VGK, PM, PI) + AI + GFT (asumsi tanpa dana).
+- Pendanaan: PT wajib maks Rp2 juta; mitra opsional maks Rp1 juta; Belmawa wajib maks Rp8 juta.
+- Aturan administratif: 3 formulir formating (AI, GFT, 8 skema didanai). Aturan substantif: rubrik per skema, skor 1,2,3,5,6,7; nilai = bobot × skor.
+- Prinsip: UX dan fungsi di atas UI; aturan berbasis data.
+- Model AI tersedia di Antigravity: Claude Sonnet dan Opus (thinking), Gemini Flash, Gemini Pro.
+- Keputusan terbuka: DEC-01 s.d. DEC-11 di `PRD.md`.
+- Berikutnya: Fase 0 (setup lingkungan, verifikasi repositori skill dan plugin), lalu jawab DEC prioritas.
