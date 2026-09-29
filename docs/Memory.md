@@ -2,6 +2,21 @@
 
 Perbarui setelah setiap sesi besar. Entri terbaru di atas.
 
+## 2026-09-29 — Fase 2: Database, Model, Enum, dan Routing (PH2-01 sd PH2-04)
+- **Breeze (Blade)** terinstal penuh.
+- **10 Enum** diimplementasikan (Role, ProposalStatus, SchemeCode, ReviewStage, dsb).
+- **30 Tabel Database (Migration)** berhasil di-*migrate* tanpa *error*, mengimplementasikan struktur data kompleks dari *cycles*, skema, rubrik, hingga *decision_batches*.
+- **28 Model Eloquent** dibuat lengkap beserta *type casting* ke Enum dan metode pembantu (*helpers*), misal `User::primaryRole()`.
+- **4 Seeder Master** selesai dibuat dan dijalankan:
+  1. `SchemeSeeder`: 10 Skema PKM.
+  2. `ThemeSeeder`: 10 Tema Tematik 2026 wajib.
+  3. `ChecklistFormSeeder`: 36 item administratif, mencakup 3 grup (*funded*, *article_ai*, *article_gft*).
+  4. `RubricSeeder`: Kriteria dan bobot *substantive* 100% untuk semua skema sesuai panduan `penilaian.md`.
+- **PH2-03 (Routing Login)**: *Universal dashboard route* (`/dashboard`) telah dipasang yang mendeteksi peran tertinggi pengguna (*SuperOperator* ke bawah) lalu melakukan *redirect* ke *sub-dashboard* peran yang sesuai (mis. `/student/dashboard`).
+- **PH2-04 (Account Claim)**: `AccountClaimService` telah disiapkan untuk menghasilkan token klaim acak yang kedaluwarsa setelah 7 hari bagi mahasiswa yang diundang sebagai anggota proposal.
+- **Sisa Fase 2:** CRUD Akun, Ruang Kontrol (PhaseGate), Form Penilaian, dan *Styling UI Layout*.
+
+
 ## 2026-09-28 — Fase 0 LULUS
 - MySQL 8.0.30 aktif; `pkm_udayana` (utf8mb4_unicode_ci) dibuat.
 - `.env` dikonfigurasi: MySQL, `APP_TIMEZONE=Asia/Makassar`, `APP_LOCALE=id`, SMTP Brevo.
