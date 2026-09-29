@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\Auth\AccountClaimController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -33,6 +34,13 @@ Route::middleware('guest')->group(function () {
 
     Route::post('reset-password', [NewPasswordController::class, 'store'])
         ->name('password.store');
+
+    // Route untuk klaim akun
+    Route::get('claim/{user}/{token}', [AccountClaimController::class, 'show'])
+        ->name('claim.show');
+    Route::post('claim/{user}/{token}', [AccountClaimController::class, 'claim'])
+        ->middleware('throttle:6,1')
+        ->name('claim.store');
 });
 
 Route::middleware('auth')->group(function () {

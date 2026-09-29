@@ -47,6 +47,11 @@ class ReviewerAssignment extends Model
         return $this->hasMany(SubstantiveScore::class, 'assignment_id');
     }
 
+    public function rubric(): BelongsTo
+    {
+        return $this->belongsTo(Rubric::class);
+    }
+
     public function isSubmitted(): bool
     {
         return $this->status === 'submitted';

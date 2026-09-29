@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class Proposal extends Model
 {
     protected $fillable = [
-        'cycle_id', 'scheme_id', 'title', 'leader_id', 'supervisor_id', 'theme_id',
+        'cycle_id', 'scheme_id', 'title', 'leader_id', 'supervisor_id', 'university_lecturer_id', 'theme_id',
         'status', 'similarity_percent', 'start_date', 'end_date', 'submitted_at',
         'admin_cost_amount', 'internal_result', 'belmawa_result', 'pimnas_status',
     ];
@@ -50,6 +50,11 @@ class Proposal extends Model
     public function supervisor(): BelongsTo
     {
         return $this->belongsTo(User::class, 'supervisor_id');
+    }
+
+    public function universityLecturer(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'university_lecturer_id');
     }
 
     public function theme(): BelongsTo
@@ -115,6 +120,11 @@ class Proposal extends Model
     public function reviewSummaries(): HasMany
     {
         return $this->hasMany(ReviewSummary::class);
+    }
+
+    public function batchDecisions(): HasMany
+    {
+        return $this->hasMany(BatchDecision::class);
     }
 
     // ─── Business helpers ───────────────────────────────────────────────────────

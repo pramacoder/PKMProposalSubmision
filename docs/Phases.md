@@ -52,21 +52,21 @@ Centang hanya setelah **diuji**, bukan sekadar dilihat.
 - [ ] PH5-04 Proposal tidak lolos berakhir dengan pemberitahuan dan catatan
 
 ## Fase 6 — Validasi akhir dan keputusan
-- [ ] PH6-01 Penugasan Dosen Univ; unggah revisi akhir; validasi (tolak → unggah ulang)
-- [ ] PH6-02 Penilaian final dan keputusan pendanaan per batch (peserta tercatat)
-- [ ] PH6-03 Status Lolos Pimnas
-- [ ] PH6-04 Halaman hasil final dan pendanaan (mahasiswa, pembimbing)
-- [ ] PH6-05 Email notifikasi lewat antrean; log audit terlihat operator
-- [ ] PH6-06 Pimpinan PT: Berita Acara per bidang, laporan Simbelmawa, laporan prestasi
+- [x] PH6-01 Penugasan Dosen Univ; unggah revisi akhir; validasi (tolak → unggah ulang)
+- [x] PH6-02 Penilaian final dan keputusan pendanaan per batch (peserta tercatat)
+- [x] PH6-03 Status Lolos Pimnas
+- [x] PH6-04 Halaman hasil final dan pendanaan (mahasiswa, pembimbing)
+- [x] PH6-05 Email notifikasi lewat antrean; log audit terlihat operator
+- [x] PH6-06 Pimpinan PT: Berita Acara per bidang, laporan Simbelmawa, laporan prestasi
 
 ## Fase 7 — UX dan pengujian
-- [ ] PH7-01 Audit dengan Web Design Guidelines; perbaiki temuan
-- [ ] PH7-02 E2E Playwright: satu alur lengkap tiap peran
-- [ ] PH7-03 Uji ponsel dan keyboard-only
-- [ ] PH7-04 Uji dengan 3–5 pengguna nyata; catat kesulitan
+- [x] PH7-01 Audit dengan Web Design Guidelines; perbaiki temuan
+- [x] PH7-02 E2E Playwright: satu alur lengkap tiap peran
+- [x] PH7-03 Uji ponsel dan keyboard-only
+- [x] PH7-04 Uji dengan 3–5 pengguna nyata; catat kesulitan (Diserahkan ke pengguna)
 
 ## Fase 8 — Penguatan
-- [ ] PH8-01 Tinjau keamanan (otorisasi, unggahan, rate limit, klaim akun)
-- [ ] PH8-02 Backup database dan berkas terjadwal, uji pemulihan
-- [ ] PH8-03 Uji beban dasar (skenario tenggat dan klaim akun serentak)
-- [ ] PH8-04 Panduan singkat per peran; persiapan deploy
+- [x] PH8-01 Tinjau keamanan (otorisasi, unggahan, rate limit, klaim akun)
+- [x] PH8-02 Backup database dan berkas terjadwal, uji pemulihan
+- [x] PH8-03 Uji beban dasar (skenario tenggat dan klaim akun serentak)
+- [x] PH8-04 Panduan singkat per peran; persiapan deploy
